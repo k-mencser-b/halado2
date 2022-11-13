@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2022 by k-mencser-b (http://jsbin.com/meyaxiy/21/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <title>JS Bin</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+<style id="jsbin-css">
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.item-1{
+  grid-area: header;
+  background-color: #6200EA;
+  width: 1600px;
+  height: 80px;
+  
+}
+.item-2{
+  grid-area: main1;
+  background-color: #F4F3F5;
+  top: 120px;
+  left: 245px;
+  width: 800px;
+  height: 720px;
+   display: flex;
+}
+.item-3{
+  grid-area: main2;
+  background-color: #F4F3F5;
+  top: 120px;
+  left: 815px;
+  width: 800px;
+  height: 720px;
+   display: flex;
+}
+.item-4{
+  grid-area: footer;
+  background-color: #211138;
+  width: 1600px;
+  height: 100px;
+}
+.container{
+ display: grid;
+  width: 1600px;
+  height: 900px;
+  grid-template-columns: 400px 400px 400px 400px;
+  grid-template-rows: 80px 720px 100px;
+  grid-template-areas:
+    "header header header header"
+    "main1 main1 main2 main2"
+    "footer footer footer footer";
+  justify-content: stretch;
+  align-content: stretch;
+  
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+  column-gap: 0;
+}
+/*---HEADER---*/
+.header{
+  display: flex;
+  flex-direction: row;
+}
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 245px;
+  color: #ffffff;
+  font-size: 50px;
+}
+.logo-text{
+  width: 120px;
+  height: 15px;
+  margin-top: 32px;
+  margin-left: 10px;
+  color: #ffffff;
+  font-size: 15px;
+}
+.button1{
+  width: 1400px;
+  height: 15px;
+  margin-left: 497px;
+  margin-top: 33px;
+}
+.home{
+  width: 47px;
+  height: 15px;
+  margin-top: 33px;
+  margin-left: 0px;
+  color: #F4F3F5;
+  font-size: 12px;
+}
+.about{
+  width: 55px;
+  height: 15px;
+  padding-top: 33px;
+  margin-left: 68px;
+  color: #F4F3F5;
+  font-size: 12px;
+}
+.pricing{
+  width: 68px;
+  height: 15px;
+  padding-top: 33px;
+  margin-left: 60px;
+  color: #F4F3F5;
+  font-size: 12px;
+}
+.contact{
+  width: 75px;
+  height: 15px;
+  padding-top: 33px;
+  margin-left: 60px;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+
+
+/*---MAIN1---*/
+.main1{
+  width: 540px;
+  height: 640px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  margin-top: 40px;
+  margin-left: 245px;
+}
+.map{
+  margin-top: 60px;
+  margin-left: 60px;
+  width: 420px;
+  height: 280px;
+}
+img{
+   width: 420px;
+  height: 280px;
+}
+.adress{
+  width: 420px;
+  height: 210px;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+.blue{
+  color: #6200EA;
+  font size: bold 12px;
+  margin-bottom: 25px;
+}
+i{
+ color: #6200EA;
+  font-size: bold;
+}
+.melrose{
+  color: #211138;
+}
+.melrose2{
+  padding-bottom: 20px;
+  color: #211138;
+}
+
+
+/*---MAIN2---*/
+.main2{
+  width: 540px;
+  height: 640px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+.one{
+  width: 420px;
+  height: 50px;
+  margin-top: 60px;
+  margin-left: 60px;
+  color: #211138;
+  font-size: 40px;
+}
+.two{
+  width: 420px;
+  height: 90px;
+  margin-top: 10px;
+  margin-left: 60px; 
+  font-size: 20px;
+  line-height: 30px;
+}
+.three{
+  width: 420px;
+  height: 50px;
+  background-color: #F4F3F5;
+  margin-top: 20px;
+  margin-left: 60px;
+  font-size: 14px;
+  color: #211138;
+  padding-top: 16px;
+  padding-left: 24px;
+}
+.four{
+  width: 420px;
+  height: 50px;
+  background-color: #F4F3F5;
+  margin-top: 15px;
+  margin-left: 60px;
+  font-size: 14px;
+  color: #211138;
+  padding-top: 16px;
+  padding-left: 24px;
+}
+.five{
+  width: 420px;
+  height: 150px;
+  background-color: #F4F3F5;
+  margin-top: 15px;
+  margin-left: 60px;
+  font-size: 14px;
+  color: #211138;
+  padding-top: 16px;
+  padding-left: 24px;
+}
+.button{
+  width: 420px;
+  height: 50px;
+  background-color: #6200EA;
+  border: 2px solid #6200EA;
+  border-radius: 24px;
+  margin-top: 20px;
+  margin-left: 60px;
+  text-align: center;
+  padding-top: 18px;
+  font-size: 15px;
+  color: #ffffff; 
+}
+.withe{
+  color: #ffffff;
+  font-size: 12px;
+}
+/*---footer---*/
+.blue-font{
+  color: #6200EA;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="container">
+  
+      <div class="item-1">
+      <div class="header">
+        
+          <div class="logo">
+            <p>O</p>
+          </div>
+          <div class="logo-text">
+            <p>LOGO TEXT</p>
+          </div>
+          <div class="button1">
+            <a href="#" class="home">HOME</a>
+            <a href="#" class="about">ABOUT</a>
+            <a href="#" class="pricing">PRICING</a>
+            <a href="#" class="contact">CONTACT</a>
+          </div>
+        </div>
+      </div>
+    
+    <div class="item-2">
+      <div class="main1">
+        <div class="map">
+          <img src="https://i.pinimg.com/564x/67/26/ec/6726ec3a96364080d606e36b172e5699.jpg" alt="map">
+        </div>
+        <div class="adress">
+          <p class="blue">ADRESS</p>
+          <p class="melrose">3481 Melrose Avenue,</p>
+          <p class="melrose2">Beverly Hills, CA 90210, USA</p>
+          <p class="blue">(123)4567890</p>
+          <p class="blue">name@example.com</p>
+          <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="item-3">
+      <div class="main2">
+        <div class="one">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="two">
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+        </div>
+        <div class="three">
+          <p>Name</p>
+        </div>
+        <div class="four">
+          <p>Enter Email</p>
+        </div>
+        <div class="five">
+          <p>Enter your Message...</p>
+        </div>
+        <div class="button">
+          <a href="#"><p class="withe">submit</p></a>
+        </div>
+      </div>
+    </div>
+  
+  
+  <div class="item-4">
+      <div class="footer">
+        <p>© 2020 Copyright</p> 
+        <p class="blue-font">Brand Name </p>
+        <p>/ Design by</p>
+        <p class="blue-font">Student Name></p>
+        </div>
+      </div>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </body>
+  </html>
+    
+</body>
+
+
+
+
+
+</html>
